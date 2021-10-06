@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComposeKit</string>
+    <string name="home">home</string>
+    <string name="profile">profile</string>
+</resources>
