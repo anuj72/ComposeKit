@@ -8,11 +8,25 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import co.mounty.composekit.MainActivity
+import co.mounty.composekit.ui.presentation.MainActivity
+
+
+
+@Composable
+fun ComposeProfile(navController: NavController, context: MainActivity) {
+    Surface(modifier = Modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Text(text = "Profile item")
+
+        }
+
+    }
+
+}
 
 @Preview
 @Composable
-fun ComposeProfile(navController: NavController, context: MainActivity) {
+fun ComposemProfile() {
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
             Text(text = "Profile item")

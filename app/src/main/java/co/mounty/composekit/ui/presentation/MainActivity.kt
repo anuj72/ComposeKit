@@ -1,4 +1,4 @@
-package co.mounty.composekit
+package co.mounty.composekit.ui.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

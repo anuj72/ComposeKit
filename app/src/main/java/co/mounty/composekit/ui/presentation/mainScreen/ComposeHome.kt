@@ -12,9 +12,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import co.mounty.composekit.ui.presentation.MainActivity
 import co.mounty.composekit.ui.presentation.component.UserCard1
 import co.mounty.composekit.ui.presentation.component.UserCard2
-import co.mounty.composekit.MainActivity
+
 import co.mounty.composekit.ui.utils.getJsonDataFromAsset
 import com.google.gson.Gson
 
