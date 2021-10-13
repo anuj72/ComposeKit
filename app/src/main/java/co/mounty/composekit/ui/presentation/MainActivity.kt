@@ -10,11 +10,15 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import co.mounty.composekit.ui.presentation.mainScreen.ComposeHome
-import co.mounty.composekit.ui.presentation.mainScreen.ComposeProfile
+import co.mounty.composekit.ui.prefrences.UserSharedPreference
+import co.mounty.composekit.ui.presentation.mainScreen.home.ComposeHome
+import co.mounty.composekit.ui.presentation.mainScreen.profile.ComposeProfile
 import co.mounty.composekit.ui.presentation.navigation.MyBottomNavigation
 import co.mounty.composekit.ui.presentation.navigation.Screen
 import co.mounty.composekit.ui.theme.ComposeKitTheme
+import org.koin.androidx.compose.get
+import org.koin.java.KoinJavaComponent.get
+import org.koin.java.KoinJavaComponent.inject
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +34,7 @@ class MainActivity : ComponentActivity() {
                 }
 
             }
+
         }
     }
 }

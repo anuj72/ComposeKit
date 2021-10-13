@@ -77,6 +77,20 @@ dependencies {
     // optional - Jetpack Compose integration
     implementation("androidx.paging:paging-compose:1.0.0-alpha13")
 
+    implementation("androidx.compose.material:material:1.1.0-alpha05")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt")
+
+
+
+   var koin_version= "3.1.2"
+
+    // Koin core features
+    implementation "io.insert-koin:koin-core:$koin_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-androidx-compose:$koin_version"
+
+
 
 
 

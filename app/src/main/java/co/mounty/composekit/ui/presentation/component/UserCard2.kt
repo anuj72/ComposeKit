@@ -12,17 +12,18 @@ import androidx.compose.ui.unit.dp
 import com.skydoves.landscapist.ShimmerParams
 import com.skydoves.landscapist.coil.CoilImage
 
+
 @Preview
 @Composable
 fun UserCard2(s: String) {
 
     Card(modifier = Modifier
         .height(300.dp)
-        .fillMaxWidth()) {
+        .fillMaxWidth(),
+    ) {
        Column {
            CoilImage(
                imageModel = s,
-
                modifier = Modifier.fillMaxWidth().height(240.dp),
                // shows a shimmering effect when loading an image.
                shimmerParams = ShimmerParams(

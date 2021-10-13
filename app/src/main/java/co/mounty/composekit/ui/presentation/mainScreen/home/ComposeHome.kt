@@ -1,4 +1,4 @@
-package co.mounty.composekit.ui.presentation.mainScreen
+package co.mounty.composekit.ui.presentation.mainScreen.home
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
@@ -20,7 +20,7 @@ import co.mounty.composekit.ui.utils.getJsonDataFromAsset
 import com.google.gson.Gson
 
 
-@Preview
+
 @Composable
 fun ComposeHome(navController: NavController, context: MainActivity) {
     val list = listOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -64,8 +64,6 @@ fun ComposeHome(navController: NavController, context: MainActivity) {
         }
 
         val gson = Gson()
-
-
         var myList=gson.fromJson(jsonFileString,Array<String>::class.java)
         myList.forEach {
             UserCard2(it)
