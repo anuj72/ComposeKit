@@ -4,9 +4,14 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.ScaffoldState
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -19,9 +24,11 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import co.mounty.composekit.R
+import co.mounty.composekit.ui.conceptLearning.coroutines.UiState
 import co.mounty.composekit.ui.prefrences.UserSharedPreference
 import co.mounty.composekit.ui.presentation.MainActivity
-
+import org.koin.androidx.compose.getViewModel
+import org.koin.androidx.viewmodel.scope.emptyState
 
 
 @Composable
@@ -29,8 +36,15 @@ fun ComposeProfile(
     navController: NavController
     , context: MainActivity,
     myPref: UserSharedPreference = org.koin.androidx.compose.get()
+,scaffoldState: ScaffoldState = rememberScaffoldState()
 ) {
-    myPref.setName("Anuj Sachan")
+     val scope = rememberCoroutineScope()
+   // myPref.setName("Anuj Sachan")
+    val vm = getViewModel<ComposeProfileVM>()
+
+
+
+
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
@@ -54,7 +68,10 @@ fun ComposeProfile(
 
 
             }
-            Text(myPref.getName().toString(),textAlign = TextAlign.Center,modifier = Modifier.padding(4.dp).fillMaxWidth())
+      var mydata=vm.uiState.value
+            Text("mydata",textAlign = TextAlign.Center,modifier = Modifier
+                .padding(4.dp)
+                .fillMaxWidth())
 
 
         }
