@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
 class ComposeHomeVM(
-    val repository: FakeApiCallRepository
+    private val repository: FakeApiCallRepository
 ):ViewModel() {
 
     val uiState = MutableStateFlow<UiState<List<String>>>(UiState.Loading)
@@ -17,7 +17,7 @@ class ComposeHomeVM(
         getMyData()
     }
 
-    fun getMyData() {
+    private fun getMyData() {
         viewModelScope.launch {
             val result = repository.apiCall()
             uiState.value = when (result) {

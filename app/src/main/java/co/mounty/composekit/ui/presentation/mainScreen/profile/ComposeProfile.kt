@@ -30,20 +30,11 @@ import co.mounty.composekit.ui.presentation.MainActivity
 import org.koin.androidx.compose.getViewModel
 import org.koin.androidx.viewmodel.scope.emptyState
 
-
+@Preview
 @Composable
-fun ComposeProfile(
-    navController: NavController
-    , context: MainActivity,
-    myPref: UserSharedPreference = org.koin.androidx.compose.get()
-,scaffoldState: ScaffoldState = rememberScaffoldState()
-) {
+fun ComposeProfile() {
      val scope = rememberCoroutineScope()
-   // myPref.setName("Anuj Sachan")
     val vm = getViewModel<ComposeProfileVM>()
-
-
-
 
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(
@@ -55,7 +46,7 @@ fun ComposeProfile(
 
                 Column() {
                     Image(
-                        painter = painterResource(R.drawable.a1),
+                        painter = painterResource(R.drawable.a0),
                         contentDescription = "avatar",
                         contentScale = ContentScale.Crop,            // crop the image if it's not a square
                         modifier = Modifier
@@ -68,8 +59,8 @@ fun ComposeProfile(
 
 
             }
-      var mydata=vm.uiState.value
-            Text("mydata",textAlign = TextAlign.Center,modifier = Modifier
+
+            Text("Anuj Sachan",textAlign = TextAlign.Center,modifier = Modifier
                 .padding(4.dp)
                 .fillMaxWidth())
 
@@ -80,37 +71,3 @@ fun ComposeProfile(
 
 }
 
-@Preview
-@Composable
-fun ComposemProfile() {
-    Surface(modifier = Modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .fillMaxWidth()
-        ) {
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-
-                Column() {
-                    Image(
-                        painter = painterResource(R.drawable.a1),
-                        contentDescription = "avatar",
-                        contentScale = ContentScale.Crop,            // crop the image if it's not a square
-                        modifier = Modifier
-                            .size(90.dp)
-                            .clip(CircleShape)                       // clip to the circle shape
-                            .border(1.dp, Color.White, CircleShape)   // add a border (optional)
-                    )
-
-                }
-
-
-            }
-          Text("Hello World",textAlign = TextAlign.Center,modifier = Modifier.fillMaxWidth())
-
-
-        }
-
-    }
-
-}
