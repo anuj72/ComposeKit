@@ -18,5 +18,5 @@ Also, see https://github.com/anuj72/KmmNetworking.git for other examples of use 
 
 
 
-https://user-images.githubusercontent.com/26837182/137582486-88c7225f-b729-4a76-a864-b3de460266c0.mp4
 
+![ezgif-6-dfddf072985a](https://user-images.githubusercontent.com/26837182/137582557-e4460618-2740-4d7b-ba47-0b3449db6dce.gif)
